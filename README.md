@@ -97,4 +97,4 @@ dotnet_diagnostic.EFLINT001.severity = none
 
 ## Contributing
 
-Issues and pull requests welcome. See [CLAUDE.md](CLAUDE.md) for project structure and development notes.
+Issues and pull requests welcome. Open an issue to discuss a bug or new diagnostic before submitting a PR.
