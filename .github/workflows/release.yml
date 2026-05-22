@@ -1,0 +1,43 @@
+name: Release
+
+# Triggered by a version tag: git tag v0.1.0 && git push --tags
+on:
+  push:
+    tags: [ 'v*' ]
+
+# Before this workflow can publish:
+#   1. Create an account at nuget.org and reserve the package ID "EFCoreLint"
+#   2. Generate an API key at nuget.org > Account > API Keys
+#   3. Add it as a repository secret named NUGET_API_KEY
+#      (Settings > Secrets and variables > Actions > New repository secret)
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Restore
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --no-restore -c Release
+
+      - name: Test
+        run: dotnet test --no-build -c Release --verbosity normal
+
+      - name: Pack
+        run: dotnet pack src/EFCoreLint/EFCoreLint.csproj --no-build -c Release -o ./artifacts
+
+      - name: Publish to NuGet
+        run: |
+          dotnet nuget push ./artifacts/*.nupkg \
+            --api-key ${{ secrets.NUGET_API_KEY }} \
+            --source https://api.nuget.org/v3/index.json \
+            --skip-duplicate

@@ -1,0 +1,10 @@
+C:\Users\amcga\OneDrive\Desktop\Vibe Coding\EFCoreLint\src\EFCoreLint\bin\Release\netstandard2.0\EFCoreLint.deps.json
+C:\Users\amcga\OneDrive\Desktop\Vibe Coding\EFCoreLint\src\EFCoreLint\bin\Release\netstandard2.0\EFCoreLint.dll
+C:\Users\amcga\OneDrive\Desktop\Vibe Coding\EFCoreLint\src\EFCoreLint\bin\Release\netstandard2.0\EFCoreLint.pdb
+C:\Users\amcga\OneDrive\Desktop\Vibe Coding\EFCoreLint\src\EFCoreLint\obj\Release\netstandard2.0\EFCoreLint.csproj.AssemblyReference.cache
+C:\Users\amcga\OneDrive\Desktop\Vibe Coding\EFCoreLint\src\EFCoreLint\obj\Release\netstandard2.0\EFCoreLint.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\amcga\OneDrive\Desktop\Vibe Coding\EFCoreLint\src\EFCoreLint\obj\Release\netstandard2.0\EFCoreLint.AssemblyInfoInputs.cache
+C:\Users\amcga\OneDrive\Desktop\Vibe Coding\EFCoreLint\src\EFCoreLint\obj\Release\netstandard2.0\EFCoreLint.AssemblyInfo.cs
+C:\Users\amcga\OneDrive\Desktop\Vibe Coding\EFCoreLint\src\EFCoreLint\obj\Release\netstandard2.0\EFCoreLint.csproj.CoreCompileInputs.cache
+C:\Users\amcga\OneDrive\Desktop\Vibe Coding\EFCoreLint\src\EFCoreLint\obj\Release\netstandard2.0\EFCoreLint.dll
+C:\Users\amcga\OneDrive\Desktop\Vibe Coding\EFCoreLint\src\EFCoreLint\obj\Release\netstandard2.0\EFCoreLint.pdb
