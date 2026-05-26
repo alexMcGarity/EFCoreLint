@@ -7,7 +7,7 @@
 
     <!-- NuGet metadata -->
     <PackageId>EFCoreLint</PackageId>
-    <Version>0.1.0</Version>
+    <Version>0.2.0</Version>
     <Authors>alexMcGarity</Authors>
     <RepositoryUrl>https://github.com/alexMcGarity/EFCoreLint</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
