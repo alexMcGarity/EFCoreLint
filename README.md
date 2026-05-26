@@ -21,6 +21,8 @@ No configuration required. Diagnostics appear automatically in your IDE and in `
 | [EFLINT001](#eflint001-client-side-filtering) | Warning | Client-side filtering after materialization |
 | [EFLINT003](#eflint003-missing-asnotracking) | Info | Read-only query missing `AsNoTracking` |
 | [EFLINT005](#eflint005-missing-await-on-async-query) | Warning | EF Core async method called without `await` |
+| [EFLINT006](#eflint006-use-any-instead-of-count) | Warning | `Count()` used for existence check instead of `Any()` |
+| [EFLINT007](#eflint007-blocking-on-async-operation) | Warning | Blocking on EF Core async operation with `.Result` or `.Wait()` |
 
 All severities can be overridden per-project via `.editorconfig`:
 
@@ -79,6 +81,40 @@ var products = await db.Products.ToListAsync();
 ```
 
 A **code fix** is available when the containing method is already `async`: it adds the `await` keyword.
+
+---
+
+---
+
+### EFLINT006: Use Any() instead of Count()
+
+Calling `Count()` and comparing against 0 or 1 to check existence issues a `COUNT(*)` query that scans every matching row. `Any()` translates to `EXISTS`, which stops at the first match.
+
+```csharp
+// ❌ Warning EFLINT006 — COUNT(*) scans all matching rows
+if (db.Orders.Where(o => o.IsOpen).Count() > 0) { }
+
+// ✅ Fixed — EXISTS short-circuits on the first match
+if (db.Orders.Where(o => o.IsOpen).Any()) { }
+```
+
+Detected patterns: `Count() > 0`, `Count() != 0`, `Count() >= 1`, `Count() == 0`, `Count() < 1`, and their flipped equivalents. A **code fix** is available for all patterns, including `Count(predicate)` → `Any(predicate)`.
+
+---
+
+### EFLINT007: Blocking on async operation
+
+Calling `.Result`, `.Wait()`, or `.GetAwaiter().GetResult()` on a Task returned by an EF Core async method blocks the calling thread and can deadlock in ASP.NET Core applications.
+
+```csharp
+// ❌ Warning EFLINT007 — blocks the thread, risks deadlock
+var products = db.Products.ToListAsync().Result;
+
+// ✅ Fixed — asynchronous, no deadlock risk
+var products = await db.Products.ToListAsync();
+```
+
+A **code fix** is available when the containing method is already `async`: it replaces the blocking call with `await`.
 
 ---
 

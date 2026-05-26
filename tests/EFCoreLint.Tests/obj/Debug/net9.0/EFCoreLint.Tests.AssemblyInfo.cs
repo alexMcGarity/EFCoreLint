@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EFCoreLint.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b1148b778197ee5c4723e57902c1e5a08b2f500")]
 [assembly: System.Reflection.AssemblyProductAttribute("EFCoreLint.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EFCoreLint.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

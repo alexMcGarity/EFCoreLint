@@ -8,3 +8,4 @@ C:\Users\amcga\OneDrive\Desktop\Vibe Coding\EFCoreLint\src\EFCoreLint\obj\Debug\
 C:\Users\amcga\OneDrive\Desktop\Vibe Coding\EFCoreLint\src\EFCoreLint\obj\Debug\netstandard2.0\EFCoreLint.csproj.CoreCompileInputs.cache
 C:\Users\amcga\OneDrive\Desktop\Vibe Coding\EFCoreLint\src\EFCoreLint\obj\Debug\netstandard2.0\EFCoreLint.dll
 C:\Users\amcga\OneDrive\Desktop\Vibe Coding\EFCoreLint\src\EFCoreLint\obj\Debug\netstandard2.0\EFCoreLint.pdb
+C:\Users\amcga\OneDrive\Desktop\Vibe Coding\EFCoreLint\src\EFCoreLint\obj\Debug\netstandard2.0\EFCoreLint.sourcelink.json

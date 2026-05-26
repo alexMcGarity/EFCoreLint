@@ -209,3 +209,4 @@ C:\Users\amcga\OneDrive\Desktop\Vibe Coding\EFCoreLint\tests\EFCoreLint.Tests\ob
 C:\Users\amcga\OneDrive\Desktop\Vibe Coding\EFCoreLint\tests\EFCoreLint.Tests\obj\Debug\net9.0\EFCoreLint.Tests.pdb
 C:\Users\amcga\OneDrive\Desktop\Vibe Coding\EFCoreLint\tests\EFCoreLint.Tests\obj\Debug\net9.0\EFCoreLint.Tests.genruntimeconfig.cache
 C:\Users\amcga\OneDrive\Desktop\Vibe Coding\EFCoreLint\tests\EFCoreLint.Tests\obj\Debug\net9.0\ref\EFCoreLint.Tests.dll
+C:\Users\amcga\OneDrive\Desktop\Vibe Coding\EFCoreLint\tests\EFCoreLint.Tests\obj\Debug\net9.0\EFCoreLint.Tests.sourcelink.json
